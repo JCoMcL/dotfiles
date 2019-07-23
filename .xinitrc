@@ -32,10 +32,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+compton --no-fading-openclose -b
+dunst -font "LiberationSans 18" &
+
 #set locale for volume buttons
 inputid=$(xinput list | sed -n 's/.*Intel Virtual.*id=\([0-9]*\).*keyboard.*/\1/p')
 test -f ~/.dotfiles/volume-keys.xkb && xkbcomp -i $inputid ~/.dotfiles/volume-keys.xkb $DISPLAY
 
 xbindkeys
 exec dwm
+
 

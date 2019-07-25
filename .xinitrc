@@ -40,6 +40,7 @@ inputid=$(xinput list | sed -n 's/.*Intel Virtual.*id=\([0-9]*\).*keyboard.*/\1/
 test -f ~/.dotfiles/volume-keys.xkb && xkbcomp -i $inputid ~/.dotfiles/volume-keys.xkb $DISPLAY
 
 xbindkeys
+nice dwmbar
 exec dwm
 
 

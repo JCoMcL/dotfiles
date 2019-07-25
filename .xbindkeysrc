@@ -40,6 +40,15 @@
 "pactl set-sink-volume @DEFAULT_SINK@ -5000"
 	XF86AudioLowerVolume
 
+# Screenshots
+"maim -i 'root' ~/media/images/prscn$(date +%F_%T).png"
+	Print
+
+"maim -s ~/media/images/slct$(date +%F_%T).png"
+	Shift + Print
+
+"maim -i $(xdotool getactivewindow) ~/media/images/win$(date +%F_%T).png"
+	Control + Print
 ##################################
 # End of xbindkeys configuration #
 ##################################

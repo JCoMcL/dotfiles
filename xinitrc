@@ -43,4 +43,3 @@ xbindkeys
 nice dwmbar
 exec dwm
 
-

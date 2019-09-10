@@ -34,14 +34,15 @@
 	XF86MonBrightnessDown
 
 # Volume
-"pactl set-sink-volume @DEFAULT_SINK@ +5000"
+"pactl set-sink-volume @DEFAULT_SINK@ +1000"
 	XF86AudioRaiseVolume
 
-"pactl set-sink-volume @DEFAULT_SINK@ -5000"
+"pactl set-sink-volume @DEFAULT_SINK@ -1000"
 	XF86AudioLowerVolume
 
 # Screenshots
-"maim -i 'root' ~/media/images/prscn$(date +%F_%T).png"
+#"maim -i 'root' ~/media/images/prscn$(date +%F_%T).png"
+"imgname=\"$HOME/media/images/prscn$(date +%F_%T).png\" && maim -i 'root' > $imgname && notify-send 'Screenshot' \"$imgname\""
 	Print
 
 "maim -s ~/media/images/slct$(date +%F_%T).png"

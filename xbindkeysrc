@@ -42,13 +42,13 @@
 
 # Screenshots
 #"maim -i 'root' ~/media/images/prscn$(date +%F_%T).png"
-"imgname=\"$HOME/media/images/prscn$(date +%F_%T).png\" && maim -i 'root' > $imgname && notify-send 'Screenshot' \"$imgname\""
+"maim -i 'root' | screenshot-saver pscrn"
 	Print
 
-"maim -s ~/media/images/slct$(date +%F_%T).png"
+"maim -s | screenshot-saver slct"
 	Shift + Print
 
-"maim -i $(xdotool getactivewindow) ~/media/images/win$(date +%F_%T).png"
+"maim -i $(xdotool getactivewindow) | screenshot-saver win"
 	Control + Print
 ##################################
 # End of xbindkeys configuration #

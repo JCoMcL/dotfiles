@@ -1,6 +1,7 @@
-cat * | sed -E -e '/^#/d' \
+sed -E -e '/^#/d' \
 -e 's/\$HOME/@\{HOME\}/' \
 -e 's/\$SHELL/@\{SHELL\}/' \
 -e 's/\$([A-Z]*)/\$\{\1\}/' \
 -e 's/=/\tDEFAULT=/' \
+$HOME/.dotfiles/environment.d/* \
 > $HOME/.pam_environment

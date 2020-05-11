@@ -1,7 +1,8 @@
 sed -E -e '/^#/d' \
--e 's/\$HOME/@\{HOME\}/' \
+-e '/^$/d' \
+-e 's/"?\$HOME"?/@\{HOME\}/' \
 -e 's/\$SHELL/@\{SHELL\}/' \
--e 's/\$([A-Z]*)/\$\{\1\}/' \
+-e 's/"?\$([A-Z_]*)"?/\$\{\1\}/' \
 -e 's/=/\tDEFAULT=/' \
 $HOME/.dotfiles/environment.d/* \
 > $HOME/.pam_environment

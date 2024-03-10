@@ -1,0 +1,43 @@
+# linopen configuration
+# enviroiment variables can be used
+
+# Specify your terminal emulator here
+# for terminal support.
+terminal=st
+
+# Specify all programs you want to
+# open in terminal like this:
+interm=lf
+interm=kak
+interm=mpv
+
+# 1. File extension
+.html:$BROWSER
+.dat:nbteditor
+.nbt:nbteditor
+.md:marktext
+.gif:mpv
+
+# 2. Mime type
+application/pdf:zathura
+application/epub+zip:zathura
+application/x-bittorrent:transadd
+application/x-wii-rom:dolphin-emu-nogui
+x-scheme-handler/magnet:transadd
+
+# 3. Mime category
+image:imv-dir
+audio:mpv
+video:mpv
+model:f3d
+text:$EDITOR
+font:fontpreview
+
+# 4. Regexp
+# Match some protocols by default
+?'^http:\/\/':$BROWSER
+?'^http.:\/\/':$BROWSER
+
+directory:lf
+
+default:/run/current-system/sw/bin/xdg-open

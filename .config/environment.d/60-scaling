@@ -1,0 +1,2 @@
+SCALE=1.5
+CHROME_SCALE=--force-device-scale-factor=$SCALE

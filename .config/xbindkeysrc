@@ -1,0 +1,89 @@
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# Backlight
+"light -A 5"
+	XF86MonBrightnessUp
+"light -A 1"
+	Shift + XF86MonBrightnessUp
+
+"light -U 5"
+	XF86MonBrightnessDown
+"light -U 1"
+	Shift + XF86MonBrightnessDown
+
+# Volume
+"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+	XF86AudioRaiseVolume
+
+"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+	XF86AudioLowerVolume
+
+# Screenshots
+#"maim -i 'root' ~/media/images/prscn$(date +%F_%T).png"
+"maim -u -i 'root' | screenshot-saver pscrn"
+	Print
+
+"maim -s | screenshot-saver slct"
+	Shift + Print
+
+"maim -i $(xdotool getactivewindow) | screenshot-saver win"
+	Control + Print
+
+"maim -u -i root -g $(xdotool getmouselocation | sed -E 's/x:([0-9]+) y:([0-9]+).*/2x2+\1+\2/') | convert - -format '#%[hex:u]' info:- | head -c 7 | xclip -sel clipboard"
+	Control + Shift  + Print
+
+# Programs
+"$BROWSER --profile-directory='Profile-Personal'"
+	Mod4 + i
+"$BROWSER --profile-directory='Profile-DCU'"
+	Mod4 + Alt + i
+
+"mpv ytdl$(xclip -selection clipboard -o | sed s/^https//)"
+	Mod4 + y
+"mpv ytdl$(xclip -selection clipboard -o | sed s/^https//) --ytdl-format=22"
+	Mod4 + Alt + y
+"mpv ytdl$(xclip -selection clipboard -o | sed s/^https//) --ytdl-format=251"
+	Mod4 + Shift + y
+
+"discord"
+	Mod4 + d
+
+"$BROWSER --new-window --profile-directory='Profile-Personal' mail.google.com"
+	Mod4 + m
+"$BROWSER --new-window --profile-directory='Profile-DCU' mail.google.com"
+	Mod4 + Alt + m
+
+"xkill"
+	Mod4 + x
+
+"xdotool mousedown 1"
+	XF86HomePage
+##################################
+# End of xbindkeys configuration #
+##################################

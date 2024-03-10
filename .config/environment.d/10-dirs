@@ -1,0 +1,4 @@
+MEDIA=$HOME/media
+SCREENSHOTS=$MEDIA/images
+
+LANGSERVERS=/usr/share/language-servers

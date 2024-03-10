@@ -1,0 +1,12 @@
+[options]
+background = checks
+
+[aliases]
+
+[binds]
+<Delete> = exec trash-put "$imv_current_file";next
+x = exec trash-put "$imv_current_file";next
+<period> = rotate by 90
+<Ctrl+period> = exec convert "$imv_current_file" -rotate 90 "$imv_current_file.new" && mv "$imv_current_file.new" "$imv_current_file"
+<comma> = rotate by -90
+<Ctrl+comma> = exec convert "$imv_current_file" -rotate -90 "$imv_current_file.new" && mv "$imv_current_file.new" "$imv_current_file"

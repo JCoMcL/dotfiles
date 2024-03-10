@@ -1,0 +1,83 @@
+# interpreter for shell commands (needs to be POSIX compatible)
+set shell sh
+
+# set '-eu' options for shell commands
+# These options are used to have safer shell commands. Option '-e' is used to
+# exit on error and option '-u' is used to give error for unset variables.
+# Option '-f' disables pathname expansion which can be useful when $f, $fs, and
+# $fx variables contain names with '*' or '?' characters. However, this option
+# is used selectively within individual commands as it can be limiting at
+# times.
+set shellopts '-eu'
+
+# set internal field separator (IFS) to "\n" for shell commands
+# This is useful to automatically split file names in $fs and $fx properly
+# since default file separator used in these variables (i.e. 'filesep' option)
+# is newline. You need to consider the values of these options and create your
+# commands accordingly.
+set ifs "\n"
+set period 1
+
+# leave some space at the top and the bottom of the screen
+set scrolloff 10
+
+#set previewer /run/current-system/sw/bin/mediainfo
+
+map <enter> shell
+
+cmd trash %set -f; trash-put $fx
+map x trash
+
+map <delete> delete
+
+# compress current file or selected files with tar and gunzip
+cmd tgz ${{
+	set -f
+	mkdir $1
+	cp -r $fx $1
+	tar czf $1.tar.gz $1
+	rm -rf $1
+}}
+
+# compress current file or selected files with zip
+cmd zip ${{
+	set -f
+	mkdir $1
+	cp -r $fx $1
+	zip -r $1.zip $1
+	rm -rf $1
+}}
+
+cmd reload-rc source ~/.config
+cmd config ${{
+	set -f
+	test -z "$XDG_CONFIG_HOME" && XDG_CONFIG_HOME="$HOME/.config"
+	$EDITOR $XDG_CONFIG_HOME/lf/lfrc
+}}
+map <c-E> config
+
+cmd clip-copy ${{
+	set -f
+	xclip -sel clipboard < $fx
+}}
+map Y clip-copy
+
+map <c-v> ${{setsid nautilus . &}}
+map <c-t> ${{newterm}}
+
+map E ${{edit-new-window $fx}}
+map e ${{$EDITOR $fx}}
+
+map W ${{(newterm) &}}
+
+cmd able %set -f; able $fx
+map <c-a> able
+
+map <c-n>
+map <c-n>d push $mkdir<space>
+map <c-n>f push $touch<space>
+
+map <c-e> ${{edir .}}
+
+map <c-w> ${{xwallpaper --zoom $fx}}
+

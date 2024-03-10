@@ -1,0 +1,15 @@
+#!/bin/sh
+
+ENVD=/home/jcomcl/.config/environment.d
+touch /etc/environment &&
+	PAMFILE=/etc/environment ||
+	PAMFILE=$HOME/.pam_environment
+
+sed -E -e '/^#/d' \
+-e '/^$/d' \
+-e 's/"?\$HOME"?/@\{HOME\}/' \
+-e 's/\$SHELL/@\{SHELL\}/' \
+-e 's/"?\$([A-Z_]*)"?/\$\{\1\}/' \
+-e 's/=/\tDEFAULT=/' \
+$ENVD/* \
+> $PAMFILE

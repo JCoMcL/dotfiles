@@ -1,6 +1,6 @@
-[submodule ".config/zsh"]
-	path = .config/zsh
-	url = https://github.com/jcomcl/zshrc.git
 [submodule ".config/kak"]
 	path = .config/kak
 	url = https://github.com/jcomcl/kak.git
+[submodule "zshrc"]
+	path = zshrc
+	url = https://github.com/JCoMcL/zshrc.git

@@ -74,10 +74,20 @@ cmd able %set -f; able $fx
 map <c-a> able
 
 map <c-n>
-map <c-n>d push $mkdir<space>
-map <c-n>f push $touch<space>
+map <c-n>d push $mkdir<space>''<left>
+map <c-n>f push $touch<space>''<left>
 
-map <c-e> ${{edir .}}
+#map <c-e> ${{edir .}}
 
 map <c-w> ${{xwallpaper --zoom $fx}}
+
+map <c-d> ${{dragon -a -x $fx}}
+
+map <tab> ${{$BROWSER $fx}}
+
+map U unselect $fx
+
+#scrolling. Unfortunately both of these are useful hotkeys that I can no longer use
+map <c-e> down
+map <c-y> up
 

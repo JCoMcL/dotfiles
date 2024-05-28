@@ -17,6 +17,11 @@ interm=mpv
 .nbt:nbteditor
 .md:marktext
 .gif:mpv
+.blend:blender #delete this sht rn
+.xcf:gimp
+.kra:krita
+.obj:f3d
+.otf:display
 
 # 2. Mime type
 application/pdf:zathura
@@ -31,7 +36,7 @@ audio:mpv
 video:mpv
 model:f3d
 text:$EDITOR
-font:fontpreview
+font:display
 
 # 4. Regexp
 # Match some protocols by default
@@ -40,4 +45,4 @@ font:fontpreview
 
 directory:lf
 
-default:/run/current-system/sw/bin/xdg-open
+default:/usr/bin/xdg-open

@@ -4,9 +4,7 @@ userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
-ZDOTDIR=~/.config/zsh/
 
-# merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
     xrdb -merge $sysresources
@@ -33,18 +31,18 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-dunst -font "LiberationSans 18" &
+#dunst -font "LiberationSans 18" &
 xbindkeys
 
-#set locale for volume buttons
-inputid=$(xinput list | sed -n 's/.*Intel Virtual.*id=\([0-9]*\).*keyboard.*/\1/p')
-test -f ~/.config/volume-keys.xkb && xkbcomp -i $inputid ~/.config/volume-keys.xkb $DISPLAY
-
-status &
+~/src/status/main &
 xset r rate 200 50 &
 picom -b
 
-cool &
+#cool &
+setsid gentoo-pipewire-launcher restart &
+xwallpaper --zoom ~/media/images/wallpapers/DSC0510\ ladder.JPG &
+picom -b
+unclutter &
 
 dwm 2> ~/.dwm.log
 

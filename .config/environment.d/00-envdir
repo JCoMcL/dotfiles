@@ -1,2 +1,2 @@
-ENVD="$XDG_CONFIG_HOME/environment.d
+ENVD="$XDG_CONFIG_HOME/environment.d"
 

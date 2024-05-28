@@ -59,7 +59,7 @@
 	Control + Shift  + Print
 
 # Programs
-"$BROWSER --profile-directory='Profile-Personal'"
+"$BROWSER"
 	Mod4 + i
 "$BROWSER --profile-directory='Profile-DCU'"
 	Mod4 + Alt + i
@@ -84,6 +84,9 @@
 
 "xdotool mousedown 1"
 	XF86HomePage
+
+"find media/images/textables | shuf | head -n1 | xargs dragon -x"
+	Mod4 + t
 ##################################
 # End of xbindkeys configuration #
 ##################################

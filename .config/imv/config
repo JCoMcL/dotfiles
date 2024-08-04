@@ -1,5 +1,6 @@
 [options]
 background = checks
+upscaling_method = nearest_neighbour
 
 [aliases]
 
@@ -11,3 +12,6 @@ x = exec trash-put "$imv_current_file";next
 <comma> = rotate by -90
 <Ctrl+comma> = exec convert "$imv_current_file" -rotate -90 "$imv_current_file.new" && mv "$imv_current_file.new" "$imv_current_file"
 <Ctrl+d> = exec dragon -x "$imv_current_file" &
+<Ctrl+y> = exec echo "$imv_current_file" | xclip -sel clipboard
+<Ctrl+k> = exec magick mogrify -fuzz 20% -trim +repage -shave 3x3 "$imv_current_file"
+n = upscaling next

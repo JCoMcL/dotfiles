@@ -44,5 +44,5 @@ xwallpaper --zoom ~/media/images/wallpapers/DSC0510\ ladder.JPG &
 picom -b
 unclutter &
 
-dwm 2> ~/.dwm.log
+dwm
 

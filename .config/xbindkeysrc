@@ -49,7 +49,7 @@
 "maim -u -i 'root' | screenshot-saver pscrn"
 	Print
 
-"maim -s | screenshot-saver slct"
+"maim -u -s | screenshot-saver slct"
 	Shift + Print
 
 "maim -i $(xdotool getactivewindow) | screenshot-saver win"

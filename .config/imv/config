@@ -1,6 +1,6 @@
 [options]
 background = checks
-upscaling_method = nearest_neighbour
+#upscaling_method = nearest_neighbour
 
 [aliases]
 
@@ -15,3 +15,9 @@ x = exec trash-put "$imv_current_file";next
 <Ctrl+y> = exec echo "$imv_current_file" | xclip -sel clipboard
 <Ctrl+k> = exec magick mogrify -fuzz 20% -trim +repage -shave 3x3 "$imv_current_file"
 n = upscaling next
+<Ctrl+s><Ctrl+s> = exec mv "$imv_current_file" "$HOME/media/images/slice of life"; echo sorted to slice of life; close
+<Ctrl+s><Ctrl+n> = exec mv "$imv_current_file" "$HOME/media/images/notes"; echo sorted to notes; close
+<Ctrl+s><Ctrl+m> = exec mv "$imv_current_file" "$HOME/media/images/memes"; echo sorted to memes; close
+<Ctrl+s><Ctrl+g> = exec mv "$imv_current_file" "$HOME/media/images/gay ass shit"; echo sorted to gay ass shit; close
+<Ctrl+s><Ctrl+i> = exec mv "$imv_current_file" "$HOME/media/images/internet-oddities"; echo sorted to internet-oddities; close
+<Ctrl+s><Ctrl+T> = exec mv "$imv_current_file" "$HOME/media/images/TEMP"; echo sorted to TEMP; close

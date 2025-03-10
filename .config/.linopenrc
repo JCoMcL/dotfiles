@@ -9,7 +9,6 @@ terminal=st
 # open in terminal like this:
 interm=lf
 interm=kak
-interm=mpv
 
 # 1. File extension
 .html:$BROWSER

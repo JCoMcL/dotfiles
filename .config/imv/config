@@ -20,4 +20,5 @@ n = upscaling next
 <Ctrl+s><Ctrl+m> = exec mv "$imv_current_file" "$HOME/media/images/memes"; echo sorted to memes; close
 <Ctrl+s><Ctrl+g> = exec mv "$imv_current_file" "$HOME/media/images/gay ass shit"; echo sorted to gay ass shit; close
 <Ctrl+s><Ctrl+i> = exec mv "$imv_current_file" "$HOME/media/images/internet-oddities"; echo sorted to internet-oddities; close
+<Ctrl+s><Ctrl+t> = exec mv "$imv_current_file" "$HOME/media/images/textables"; echo sorted to textables; close
 <Ctrl+s><Ctrl+T> = exec mv "$imv_current_file" "$HOME/media/images/TEMP"; echo sorted to TEMP; close

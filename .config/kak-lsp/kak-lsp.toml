@@ -17,6 +17,12 @@ typescript = "typescriptreact"
 protobuf = "proto"
 sh = "shellscript"
 
+[language_server.gdscript]
+roots = [".git", "project.godot"]
+filetypes = ["gdscript"]
+command = "socat"
+args = ["-d", "-d", "TCP:localhost:6005", "STDIO"]
+
 [language_server.bash-language-server]
 filetypes = ["sh"]
 roots = [".git", ".hg"]

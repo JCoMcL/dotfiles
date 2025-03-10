@@ -48,7 +48,9 @@ cmd zip ${{
 	rm -rf $1
 }}
 
-cmd reload-rc source ~/.config
+cmd open ${{$OPENER $f &}}
+
+cmd re source ~/.config/lf/lfrc
 cmd config ${{
 	set -f
 	test -z "$XDG_CONFIG_HOME" && XDG_CONFIG_HOME="$HOME/.config"

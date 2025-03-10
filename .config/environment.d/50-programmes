@@ -1,4 +1,0 @@
-PAGER=/usr/bin/less
-EDITOR=/usr/bin/nvim
-VISUAL=$EDITOR
-BROWSER=/usr/bin/surf

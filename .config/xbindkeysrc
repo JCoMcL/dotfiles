@@ -85,7 +85,7 @@
 "xdotool mousedown 1"
 	XF86HomePage
 
-"find media/images/textables | shuf | head -n1 | xargs dragon -x"
+"find media/images/textables | shuf | head  | xargs -d '\n' dragon -x"
 	Mod4 + t
 ##################################
 # End of xbindkeys configuration #

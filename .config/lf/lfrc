@@ -23,7 +23,7 @@ set scrolloff 10
 
 #set previewer /run/current-system/sw/bin/mediainfo
 
-map <enter> shell
+map <enter> push $<space>$fx<home>
 
 cmd trash %set -f; trash-put $fx
 map x trash
@@ -49,6 +49,7 @@ cmd zip ${{
 }}
 
 cmd open ${{$OPENER $f &}}
+#cmd open ${{echo $f >> ~/list}}
 
 cmd re source ~/.config/lf/lfrc
 cmd config ${{
@@ -93,3 +94,4 @@ map U unselect $fx
 map <c-e> down
 map <c-y> up
 
+map <c-s> push $sortto<space>-i/<space>$fx<left><left><left><left>

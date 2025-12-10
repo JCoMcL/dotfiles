@@ -20,7 +20,11 @@ interm=kak
 .xcf:gimp
 .kra:krita
 .obj:f3d
+.stl:f3d
 .otf:display
+.kdenlive:kdenlive
+.godot:godot
+.aseprite:aseprite
 
 # 2. Mime type
 application/pdf:zathura

@@ -7,3 +7,6 @@
 [submodule ".config/mpv/scripts/mpv-cut"]
 	path = .config/mpv/scripts/mpv-cut
 	url = https://github.com/familyfriendlymikey/mpv-cut.git
+[submodule ".config/mpv/shaders/mpv-retro-shaders"]
+	path = .config/mpv/shaders/mpv-retro-shaders
+	url = https://git.sr.ht/~taiite/mpv-retro-shaders

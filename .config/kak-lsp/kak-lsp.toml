@@ -301,7 +301,7 @@ args = ["--stdio"]
 [language_server.ruff]
 filetypes = ["python"]
 roots = ["requirements.txt", "setup.py", ".git", ".hg"]
-command = "ruff-lsp"
+command = "ruff server"
 settings_section = "_"
 [language_server.ruff.settings._.globalSettings]
 organizeImports = true

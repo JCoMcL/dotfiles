@@ -48,7 +48,7 @@ cmd zip ${{
 	rm -rf $1
 }}
 
-cmd open ${{$OPENER $f &}}
+cmd open ${{setsid $OPENER $f &}}
 #cmd open ${{echo $f >> ~/list}}
 
 cmd re source ~/.config/lf/lfrc
@@ -67,6 +67,8 @@ map Y clip-copy
 
 map <c-v> ${{setsid nautilus . &}}
 map <c-t> ${{newterm}}
+
+map <c-j> ${{just || make}}
 
 map E ${{edit-new-window $fx}}
 map e ${{$EDITOR $fx}}

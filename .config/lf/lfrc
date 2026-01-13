@@ -56,8 +56,7 @@ cmd config ${{
 	set -f
 	test -z "$XDG_CONFIG_HOME" && XDG_CONFIG_HOME="$HOME/.config"
 	$EDITOR $XDG_CONFIG_HOME/lf/lfrc
-}}
-map <c-E> config
+}}; reload
 
 cmd clip-copy ${{
 	set -f
@@ -65,7 +64,6 @@ cmd clip-copy ${{
 }}
 map Y clip-copy
 
-map <c-v> ${{setsid nautilus . &}}
 map <c-t> ${{newterm}}
 
 map <c-j> ${{just || make}}
@@ -82,7 +80,7 @@ map <c-n>
 map <c-n>d push $mkdir<space>''<left>
 map <c-n>f push $touch<space>''<left>
 
-#map <c-e> ${{edir .}}
+map <c-f> $lf -remote "send $id select $(fzf --walker-root=$(project-root))"
 
 map <c-w> ${{xwallpaper --zoom $fx}}
 

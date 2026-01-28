@@ -45,8 +45,7 @@
 	XF86AudioLowerVolume
 
 # Screenshots
-#"maim -i 'root' ~/media/images/prscn$(date +%F_%T).png"
-"maim -u -i 'root' | screenshot-saver pscrn"
+"maim -i 'root' | screenshot-saver pscrn"
 	Print
 
 "maim -u -s | screenshot-saver slct"
@@ -83,6 +82,7 @@
 
 "find media/images/textables | shuf | head  | xargs -d '\n' dragon -x"
 	Mod4 + t
-##################################
-# End of xbindkeys configuration #
-##################################
+
+"newterm reaction"
+	Mod4 + Alt + t
+

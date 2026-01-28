@@ -10,13 +10,13 @@
 xbindkeys
 
 ~/src/status/main &
-xset r rate 200 50 &
 
 #cool &
 setsid gentoo-pipewire-launcher restart &
-xwallpaper --zoom ~/media/images/wallpapers/DSC0510\ ladder.JPG &
+xwallpaper --daemon --zoom ~/media/images/wallpapers/DSC0510\ ladder.JPG &
 unclutter &
 dunst &
+fastcompmgr &
 #/usr/lib/pentablet/PenTablet.sh \mini &
 
 dwm

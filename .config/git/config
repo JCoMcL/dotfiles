@@ -1,0 +1,12 @@
+[user]
+	name = jcomcl
+	email = j@jcom.cl
+
+[init]
+	defaultBranch = master
+
+[core]
+	editor = kak
+
+[submodule]
+	recurse = true

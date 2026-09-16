@@ -17,6 +17,7 @@ x = exec trash-put "$imv_current_file";next
 <Ctrl+k> = exec magick mogrify -fuzz 20% -trim +repage -shave 3x3 "$imv_current_file"
 n = upscaling next
 o = exec imv "$imv_current_file" &
+<bracketright> = next_frame
 
 <Ctrl+s><Ctrl+s> = sortto -s "$imv_current_file";next
 <Ctrl+s><Ctrl+n> = sortto -n "$imv_current_file";next

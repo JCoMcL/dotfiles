@@ -17,6 +17,11 @@ typescript = "typescriptreact"
 protobuf = "proto"
 sh = "shellscript"
 
+[language_server.ols]
+roots = [".git", "ols.json"]
+filetypes = ["odin"]
+command = "ols"
+
 [language_server.gdscript]
 roots = [".git", "project.godot"]
 filetypes = ["gdscript"]

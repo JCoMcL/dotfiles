@@ -80,7 +80,7 @@ map <c-n>
 map <c-n>d push $mkdir<space>''<left>
 map <c-n>f push $touch<space>''<left>
 
-map <c-f> $lf -remote "send $id select $(fzf --walker-root=$(project-root))"
+map <c-f> $lf -remote "send $id select \"$(fzf --walker=file,hidden --walker-root=$(project-root))\""
 
 map <c-w> ${{xwallpaper --zoom $fx}}
 

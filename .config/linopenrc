@@ -1,30 +1,37 @@
 # linopen configuration
-# enviroiment variables can be used
+# environment variables can be used
 
 # Specify your terminal emulator here
 # for terminal support.
-terminal=st
+terminal=alacritty
 
 # Specify all programs you want to
 # open in terminal like this:
 interm=lf
 interm=kak
+interm=fluidsynth
 
 # 1. File extension
 .html:$BROWSER
 .dat:nbteditor
 .nbt:nbteditor
 .md:marktext
-.gif:mpv
+.gif:imv
 .blend:blender #delete this sht rn
 .xcf:gimp
 .kra:krita
 .obj:f3d
 .stl:f3d
 .otf:display
+.ttf:display
 .kdenlive:kdenlive
 .godot:godot
 .aseprite:aseprite
+.jar:java -jar
+.mid:fluidsynth
+.ardour:ardour9
+.3ds:azahar
+.mp3:mpv
 
 # 2. Mime type
 application/pdf:zathura
@@ -32,6 +39,7 @@ application/epub+zip:zathura
 application/x-bittorrent:transadd
 application/x-wii-rom:dolphin-emu-nogui
 x-scheme-handler/magnet:transadd
+application/vnd.ms-opentype:display
 
 # 3. Mime category
 image:imv-dir
@@ -49,3 +57,4 @@ font:display
 directory:lf
 
 default:/usr/bin/xdg-open
+

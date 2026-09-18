@@ -13,3 +13,6 @@
 [submodule "bin"]
 	path = bin
 	url = https://github.com/jcomcl/scripts.git
+[submodule "src/.local/share/new"]
+	path = src/.local/share/new
+	url = https://github.com/jcomcl/templates.git

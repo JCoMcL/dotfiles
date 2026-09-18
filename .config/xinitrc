@@ -22,5 +22,8 @@ hsetroot
 fastcompmgr &
 #/usr/lib/pentablet/PenTablet.sh \mini &
 
-dwm
+logdir="${XDG_STATE_HOME:-$HOME/.local/state}"
+mkdir -p "$logdir"
+dwm 2>&1 > "$logdir/dwm.log"
+cat "$logdir/dwm.log"
 
